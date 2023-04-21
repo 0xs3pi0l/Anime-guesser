@@ -16,13 +16,14 @@ function swapContent(quote){
     let h1 = document.getElementsByTagName("h1");
     h1[0].style.fontSize = "50px";
     h1[0].style.textAlign = "match-parent";
-    h1[0].innerHTML = quote;
+    h1[0].innerHTML = quote.quote;
+    swapButton(quote.anime);
 }
 
 function fetchQuote(){
     fetch('https://animechan.vercel.app/api/random')
         .then(response => response.json())
-        .then(quote => swapContent(quote.quote));
+        .then(quote => swapContent(quote));
     
 }
 
