@@ -66,7 +66,7 @@ function swapContent(quote){
     let h1 = document.getElementsByTagName("h1");
     h1[0].style.fontSize = "50px";
     h1[0].style.textAlign = "match-parent";
-    h1[0].innerHTML = quote.quote;
+    h1[0].innerHTML = "\"" + quote.quote + "\"";
 
     fetchTitles(quote.anime);
 }
