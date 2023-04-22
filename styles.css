@@ -51,9 +51,17 @@ main button {
     padding: 20px 60px 20px 60px;
     border-radius: 15px;
     border: 0px;
+    margin-top: 20px;
 }
 
 button:hover{
     background-color: #29302c;
     cursor: pointer;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
