@@ -1,5 +1,9 @@
 let playButton = document.getElementsByTagName("button");
 
+function correctAnswer(button){
+    button.style.backgroundColor = "#1bab55"
+}
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -31,11 +35,11 @@ function fetchTitles(rightTitle){
                 titles[2] = rightTitle;
                 break;
         }
-        swapButton(titles);
+        swapButton(titles, randomStartingIndex);
       })
 }
 
-function swapButton(titles){
+function swapButton(titles, rightIndex){
     playButton[0].remove();
     let button1 = document.createElement("button");
     let button2 = document.createElement("button");
@@ -50,6 +54,11 @@ function swapButton(titles){
     div[0].appendChild(button1);
     div[0].appendChild(button2);
     div[0].appendChild(button3);
+    let buttons = document.getElementsByTagName("button");
+    button.forEach(elem => elem.addEventListener("click", () => {
+    }))
+        
+
 }
 
 function swapContent(quote){
