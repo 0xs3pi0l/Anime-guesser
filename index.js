@@ -56,7 +56,6 @@ function fetchTitles(rightTitle){
 }
 
 function swapButton(titles, rightIndex){
-    //playButton[0].remove();
     console.log("OK");
     let button1 = document.createElement("button");
     let button2 = document.createElement("button");
@@ -75,15 +74,15 @@ function swapButton(titles, rightIndex){
     buttons.forEach(elem => elem.addEventListener("click", () => {
         if (rightIndex == 0){
             buttons[0].style.backgroundColor = "#1b9421"
-            buttons[1].style.backgroundColor = "#911a1a"
-            buttons[2].style.backgroundColor = "#911a1a"
+            buttons[1].style.backgroundColor = "#e72c2c"
+            buttons[2].style.backgroundColor = "#e72c2c"
         } else if (rightIndex == 1) {
-            buttons[0].style.backgroundColor = "#911a1a"
+            buttons[0].style.backgroundColor = "#e72c2c"
             buttons[1].style.backgroundColor = "#1b9421"
-            buttons[2].style.backgroundColor = "#911a1a"
+            buttons[2].style.backgroundColor = "#e72c2c"
         } else {
-            buttons[0].style.backgroundColor = "#911a1a"
-            buttons[1].style.backgroundColor = "#911a1a"
+            buttons[0].style.backgroundColor = "#e72c2c"
+            buttons[1].style.backgroundColor = "#e72c2c"
             buttons[2].style.backgroundColor = "#1b9421"
         }
 

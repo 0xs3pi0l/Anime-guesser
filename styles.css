@@ -5,20 +5,20 @@
 }
 
 body {
-    background-color: #216869;;
+    background-color: #fef9ef;;
 }
 
 nav {
     display: flex;
     justify-content: start;
-    background-color: #241f1f;
+    background-color: #fe6d73;
 }
 
 nav p {
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #d5d5d5;
+    color: #000000;
     padding: 20px;
 }
 
@@ -39,15 +39,15 @@ h1 {
     font-size: 100px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-    color: #d5d5d5;
+    color: #242424;
 }
 
 main button {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: #d5d5d5;
-    background-color: #1f2421;
+    color: #000000;
+    background-color: #ffcb77;
     padding: 20px 60px 20px 60px;
     border-radius: 15px;
     border: 0px;
@@ -55,7 +55,7 @@ main button {
 }
 
 button:hover{
-    background-color: #29302c;
+    background-color: #ffdeaa;
     cursor: pointer;
 }
 
