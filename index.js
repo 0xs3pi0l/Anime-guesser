@@ -73,17 +73,17 @@ function swapButton(titles, rightIndex){
     let buttons = [...document.getElementsByTagName("button")];
     buttons.forEach(elem => elem.addEventListener("click", () => {
         if (rightIndex == 0){
-            buttons[0].style.backgroundColor = "#1b9421"
+            buttons[0].style.backgroundColor = "#28e032"
             buttons[1].style.backgroundColor = "#e72c2c"
             buttons[2].style.backgroundColor = "#e72c2c"
         } else if (rightIndex == 1) {
             buttons[0].style.backgroundColor = "#e72c2c"
-            buttons[1].style.backgroundColor = "#1b9421"
+            buttons[1].style.backgroundColor = "#28e032"
             buttons[2].style.backgroundColor = "#e72c2c"
         } else {
             buttons[0].style.backgroundColor = "#e72c2c"
             buttons[1].style.backgroundColor = "#e72c2c"
-            buttons[2].style.backgroundColor = "#1b9421"
+            buttons[2].style.backgroundColor = "#28e032"
         }
 
         buttons[0].style.cursor = "auto"
