@@ -1,5 +1,3 @@
-let playButton = document.getElementsByTagName("button");
-
 function reset(){
     let buttonsDiv = document.getElementById("play+titles");
     buttonsDiv.innerHTML = "";
@@ -85,15 +83,12 @@ function swapButton(titles, rightIndex){
             buttons[1].style.backgroundColor = "#e72c2c"
             buttons[2].style.backgroundColor = "#28e032"
         }
-
         buttons[0].style.cursor = "auto"
         buttons[1].style.cursor = "auto"
         buttons[2].style.cursor = "auto"
-
         addReplayButton();
     }))
         
-
 }
 
 function swapContent(quote){
@@ -104,10 +99,8 @@ function swapContent(quote){
     } else {
         h1[0].style.fontSize = "50px";
     }
-    
     h1[0].style.textAlign = "match-parent";
     h1[0].innerHTML = "\"" + quote.quote + "\"";
-
     fetchTitles(quote.anime);
 }
 
@@ -117,4 +110,5 @@ function fetchQuote(){
         .then(quote => swapContent(quote));
 }
 
+let playButton = document.getElementsByTagName("button");
 playButton[0].addEventListener("click", fetchQuote);
