@@ -1,7 +1,22 @@
 let playButton = document.getElementsByTagName("button");
 
-function correctAnswer(button){
-    button.style.backgroundColor = "#1bab55"
+function reset(){
+    let buttonsDiv = document.getElementById("play+titles");
+    buttonsDiv.innerHTML = "";
+    let playAgainButton = document.getElementById("playAgain");
+    playAgainButton.innerHTML = "";
+}
+
+function addReplayButton(){
+    let playAgainDiv = document.getElementById("playAgain");
+    let playAgainButton = document.createElement("button");
+    playAgainButton.style.fontSize = "20px";
+    playAgainButton.innerHTML = "Play again";
+    playAgainDiv.appendChild(playAgainButton);
+    playAgainButton.addEventListener("click", () => {
+        reset();
+        fetchQuote();
+    })
 }
 
 function getRandomInt(max) {
@@ -35,12 +50,14 @@ function fetchTitles(rightTitle){
                 titles[2] = rightTitle;
                 break;
         }
+        reset();
         swapButton(titles, randomStartingIndex);
       })
 }
 
 function swapButton(titles, rightIndex){
-    playButton[0].remove();
+    //playButton[0].remove();
+    console.log("OK");
     let button1 = document.createElement("button");
     let button2 = document.createElement("button");
     let button3 = document.createElement("button");
@@ -73,13 +90,14 @@ function swapButton(titles, rightIndex){
         buttons[0].style.cursor = "auto"
         buttons[1].style.cursor = "auto"
         buttons[2].style.cursor = "auto"
+
+        addReplayButton();
     }))
         
 
 }
 
 function swapContent(quote){
-    //Swap anime title
     let h1 = document.getElementsByTagName("h1");
     h1[0].style.fontSize = "50px";
     h1[0].style.textAlign = "match-parent";
