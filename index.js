@@ -54,8 +54,25 @@ function swapButton(titles, rightIndex){
     div[0].appendChild(button1);
     div[0].appendChild(button2);
     div[0].appendChild(button3);
-    let buttons = document.getElementsByTagName("button");
-    button.forEach(elem => elem.addEventListener("click", () => {
+    let buttons = [...document.getElementsByTagName("button")];
+    buttons.forEach(elem => elem.addEventListener("click", () => {
+        if (rightIndex == 0){
+            buttons[0].style.backgroundColor = "#1b9421"
+            buttons[1].style.backgroundColor = "#911a1a"
+            buttons[2].style.backgroundColor = "#911a1a"
+        } else if (rightIndex == 1) {
+            buttons[0].style.backgroundColor = "#911a1a"
+            buttons[1].style.backgroundColor = "#1b9421"
+            buttons[2].style.backgroundColor = "#911a1a"
+        } else {
+            buttons[0].style.backgroundColor = "#911a1a"
+            buttons[1].style.backgroundColor = "#911a1a"
+            buttons[2].style.backgroundColor = "#1b9421"
+        }
+
+        buttons[0].style.cursor = "auto"
+        buttons[1].style.cursor = "auto"
+        buttons[2].style.cursor = "auto"
     }))
         
 
