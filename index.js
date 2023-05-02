@@ -8,7 +8,7 @@ function reset(){
 function addReplayButton(){
     let playAgainDiv = document.getElementById("playAgain");
     let playAgainButton = document.createElement("button");
-    playAgainButton.style.fontSize = "20px";
+    playAgainButton.style.fontSize = "1rem";
     playAgainButton.innerHTML = "Play again";
     playAgainDiv.appendChild(playAgainButton);
     playAgainButton.addEventListener("click", () => {
@@ -62,9 +62,9 @@ function swapButton(titles, rightIndex){
     button1.innerHTML = titles[0];
     button2.innerHTML = titles[1];
     button3.innerHTML = titles[2];
-    button1.style.fontSize = "20px";
-    button2.style.fontSize = "20px";
-    button3.style.fontSize = "20px";
+    button1.style.fontSize = "0.5 rem";
+    button2.style.fontSize = "0.5 rem";
+    button3.style.fontSize = "0.5 rem";
     div[0].appendChild(button1);
     div[0].appendChild(button2);
     div[0].appendChild(button3);
@@ -95,9 +95,9 @@ function swapContent(quote){
     let h1 = document.getElementsByTagName("h1");
     console.log(quote.quote.length);
     if (quote.quote.length > 200) {
-        h1[0].style.fontSize = "20px";
+        h1[0].style.fontSize = "2em";
     } else {
-        h1[0].style.fontSize = "50px";
+        h1[0].style.fontSize = "4em";
     }
     h1[0].style.textAlign = "match-parent";
     h1[0].innerHTML = "\"" + quote.quote + "\"";
