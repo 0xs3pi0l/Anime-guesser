@@ -8,4 +8,5 @@ What i learned
 - Handling events by adding event listeners
 - Promises 
 - Basic DOM manipulation
-- Fetch API  
+- Fetch API 
+- Responsive design 
