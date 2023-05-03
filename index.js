@@ -62,9 +62,9 @@ function swapButton(titles, rightIndex){
     button1.innerHTML = titles[0];
     button2.innerHTML = titles[1];
     button3.innerHTML = titles[2];
-    button1.style.fontSize = "0.5 rem";
-    button2.style.fontSize = "0.5 rem";
-    button3.style.fontSize = "0.5 rem";
+    button1.style.fontSize = "1rem";
+    button2.style.fontSize = "1rem";
+    button3.style.fontSize = "1rem";
     div[0].appendChild(button1);
     div[0].appendChild(button2);
     div[0].appendChild(button3);
@@ -94,10 +94,18 @@ function swapButton(titles, rightIndex){
 function swapContent(quote){
     let h1 = document.getElementsByTagName("h1");
     console.log(quote.quote.length);
-    if (quote.quote.length > 200) {
-        h1[0].style.fontSize = "2em";
+    if (quote.quote.length >= 200) {
+        if (window.matchMedia("(max-width: 650px")){
+            h1[0].style.fontSize = "1em";
+        } else {
+            h1[0].style.fontSize = "3em";
+        }
     } else {
-        h1[0].style.fontSize = "4em";
+        if (window.matchMedia("(max-width: 650px")){
+            h1[0].style.fontSize = "2em";
+        } else {
+            h1[0].style.fontSize = "4em";
+        }
     }
     h1[0].style.textAlign = "match-parent";
     h1[0].innerHTML = "\"" + quote.quote + "\"";
